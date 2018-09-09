@@ -1,0 +1,36 @@
+{
+    "data": [
+        {
+            "title": "Donuts",
+            "photos": "http://sv1.upsieutoc.com/2018/09/09/kisspng-twelve-cupcakes-birthday-cake-silhouette-cupcakes-vector-5ad80166c5ec05.2157441415241055748107.png",
+            "backgroundColor": "#f46388",
+            "cakes": [
+                "Double Chocolate",
+                "Vanilla Frosted",
+                "Strawberry Frosted",
+                "Boston Kreme"
+            ]
+        },
+        {
+            "title": "Cupcakes",
+            "photos": "http://sv1.upsieutoc.com/2018/09/09/kisspng-cake-decorating-icing-baking-cup-dessert-ocean-cupcake-5ab0ab7bb5e214.388031131521527675745.png",
+            "backgroundColor": "#f3b2f6",
+            "cakes": [
+                "Chocolate Coconut Cream Pie",
+                "Chocolate Espresso",
+                "Caramel Chocolate Chip",
+                "Blackforest Cherry",
+                "Red Velvet"
+            ]
+        },
+        {
+            "title": "Pastrys",
+            "photos": "http://sv1.upsieutoc.com/2018/09/09/kisspng-bavarian-cream-fruitcake-torte-frozen-dessert-butt-orange-peel-pastries-cakes-more-5b3a2042c8b270.7381768015305360028221.png",
+            "backgroundColor": "#ff755e",
+            "cakes": [
+                "Boston cream pie",
+                "Banoffee pie"
+            ]
+        }
+    ]
+}
