@@ -15,7 +15,7 @@ class ColorControl extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            initWidth: 365 / 255,
+            initWidth: 350 / 255,
             positionText: 0,
         }
     }
@@ -40,7 +40,7 @@ class ColorControl extends Component {
 
     render() {
         return (
-            <View style={{ marginVertical: 15, marginHorizontal: 20 }}>
+            <View style={{ marginTop: 20, marginHorizontal: 20 }}>
                 <Text style={{ left: this.state.positionText }}>{this.props.item.value}</Text>
                 <Slider
                     style={{ width: 365 }}
