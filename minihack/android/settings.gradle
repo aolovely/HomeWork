@@ -1,0 +1,3 @@
+rootProject.name = 'minihack'
+
+include ':app'
