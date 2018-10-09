@@ -2,66 +2,69 @@ import React, { Component } from 'react';
 import {
     Text,
     View,
+    TouchableOpacity,
     Image,
     StyleSheet,
-    TouchableOpacity,
+    Dimensions
 } from 'react-native';
 
 class FilmItem extends Component {
     state = {}
     render() {
         return (
-            <TouchableOpacity style={{ borderBottomWidth: 1 }}
+            <TouchableOpacity
+                style={styles.container}
                 onPress={() => this.props.navigation.navigate('ListDetail',
-                    { info: this.props.item })}
-            >
-                <View style={styles.container}>
-                    <Image
-                        source={{ uri: `https://image.tmdb.org/t/p/w500/${this.props.item.known_for[0].poster_path}` }}
-                        style={styles.image}
-                    />
-                    <View style={styles.textContainer}>
-                        <Text style={styles.movieTitle} numberOfLines={2}>
-                            {/* {this.props.item.name} */}
-                            {this.props.item.known_for[0].original_title}
-                        </Text>
-                        <Text>
-                            <Text style={styles.movieYear}>{this.props.item.known_for[0].release_date} </Text>
-                            <Text style={{ color: 'green', fontSize: 15 }}> .Rating {this.props.item.known_for[0].vote_average}</Text>
-                        </Text>
-                    </View>
+                    { info: this.props.item })} >
+
+                <Image
+                    style={styles.image}
+                    source={{ uri: `https://image.tmdb.org/t/p/w500/${this.props.item.known_for[0].poster_path}` }}
+                    resizeMode={'stretch'}
+                />
+                <View style={styles.preview}>
+                    <Text style={styles.txtName}
+                        numberOfLines={2}>{this.props.item.name}</Text>
+                    <Text style={styles.txtDate}>Ratting: {this.props.item.known_for[0].vote_average}</Text>
                 </View>
 
-            </TouchableOpacity >
+
+            </TouchableOpacity>
         );
     }
 }
 
 const styles = StyleSheet.create({
     container: {
-        alignItems: 'center',
-        backgroundColor: 'rgb(66, 62, 62)',
-        flexDirection: 'row',
-        padding: 8,
-
+        flexDirection: 'column',
+        // height: 270,
+        width: Dimensions.get('window').width / 2,
+        padding: 10,
+        backgroundColor: '#D1D9DB'
     },
     image: {
-        height: 93,
-        marginRight: 10,
-        width: 60,
+        height: 210,
+        borderRadius: 10,
     },
-    textContainer: {
-        flex: 1,
+    preview: {
+        backgroundColor: '#FAFBFC',
+        borderRadius: 10,
+        alignItems: 'center'
     },
-    movieTitle: {
-        flex: 1,
+    txtName: {
         fontSize: 18,
-        fontWeight: '500',
-        marginBottom: 2,
+        fontWeight: 'bold',
+        marginTop: 10,
+        color: '#595C6E'
+
     },
-    movieYear: {
-        color: '#999999',
-        fontSize: 14,
-    },
+    txtDate: {
+        fontSize: 13,
+        marginVertical: 7,
+        color: '#595C6E',
+        fontWeight: 'bold',
+        opacity: 0.8
+    }
 })
+
 export default FilmItem;

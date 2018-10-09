@@ -27,12 +27,12 @@ const Navigation = createStackNavigator({
       return {
         title: "Film",
         headerStyle: {
-          backgroundColor: 'rgb(41,41,41)',
+          backgroundColor: '#51A9DC',
         },
         headerTitleStyle: {
-          width: '85%',
+          width: '80%',
           textAlign: 'center',
-          color: 'gray',
+          color: '#FAFBFC',
           fontSize: 22,
           fontWeight: 'bold',
         },
@@ -45,12 +45,12 @@ const Navigation = createStackNavigator({
       return {
         title: "Info",
         headerStyle: {
-          backgroundColor: 'rgb(41,41,41)',
+          backgroundColor: '#51A9DC',
         },
         headerTitleStyle: {
           width: '80%',
           textAlign: 'center',
-          color: 'gray',
+          color: '#FAFBFC',
           fontSize: 22,
           fontWeight: 'bold',
         },

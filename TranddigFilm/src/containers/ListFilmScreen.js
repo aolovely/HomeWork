@@ -25,6 +25,7 @@ class ListFilmScreen extends Component {
                 <FlatList
                     data={this.props.dataFilm.data}
                     renderItem={this.renderItem}
+                    numColumns={2}
                     keyExtractor={(item) => item.id.toString()} />
 
             </View>
