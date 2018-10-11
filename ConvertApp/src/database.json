@@ -1,0 +1,54 @@
+{
+    "lenght": [
+        {
+            "id": 0,
+            "name": "Minimet",
+            "color": "#ff8000",
+            "value": 1
+        },
+        {
+            "id": 1,
+            "name": "Centimeter",
+            "color": "#ffa64d",
+            "value": 10
+        },
+        {
+            "id": 2,
+            "name": "Decimeter",
+            "color": "#ff8000",
+            "value": 100
+        },
+        {
+            "id": 3,
+            "name": "Meter",
+            "color": "#ffa64d",
+            "value": 1000
+        }
+    ],
+    "weight": [
+        {
+            "id": 0,
+            "name": "Kilo",
+            "color": "#ff8000",
+            "value": 1
+        },
+        {
+            "id": 1,
+            "name": "Stone",
+            "color": "#ffa64d",
+            "value": 10
+        },
+        {
+            "id": 2,
+            "name": "Weight",
+            "color": "#ff8000",
+            "value": 100
+        },
+        {
+            "id": 3,
+            "name": "Metric tonne",
+            "color": "#ffa64d",
+            "value": 1000
+        }
+    ]
+}
