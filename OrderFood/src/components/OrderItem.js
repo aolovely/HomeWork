@@ -18,12 +18,12 @@ class OrderItem extends Component {
     render() {
         return (
             <View style={{ flexDirection: 'row', alignItems: 'center', marginVertical: 4 }}>
-                <TouchableOpacity
+                {this.props.historyMode === false && <TouchableOpacity
                     onPress={() => this.props.delOrder(this.props.item.name)}>
                     <Icon name="trash"
                         size={25} color={primaryColorGreen}
                         style={{ marginHorizontal: 4 }}></Icon>
-                </TouchableOpacity>
+                </TouchableOpacity>}
                 <Text style={styles.amount}>{this.props.item.amount}</Text>
                 <Text style={{
                     color: primaryColorBrown,

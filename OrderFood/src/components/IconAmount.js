@@ -9,10 +9,26 @@ import { connect } from 'react-redux'
 import { primaryColorGreen, primaryColorRed } from '../styles'
 
 import Icon from 'react-native-vector-icons/FontAwesome'
+import firebase from 'react-native-firebase'
 
 class IconAmount extends Component {
-    state = {}
+    constructor(props) {
+        super(props)
+        this.state = {
+            ongoing: []
+        }
+    }
 
+    componentDidMount() {
+        // firebase.database().ref('/users')
+        //     .child(firebase.auth().currentUser.uid)
+        //     .child('history')
+        //     .once('value', res => this.setState({
+        //         ongoing: res._value.filter(order => order.onGoing === true)
+
+        //     }))
+
+    }
     render() {
 
         const total = (this.props.orders.length === 0) ? 0
@@ -20,12 +36,25 @@ class IconAmount extends Component {
                 (accumulator, currentValue) => accumulator + currentValue.amount,
                 0
             )
+
+        firebase.database().ref('/users')
+            .child(firebase.auth().currentUser.uid)
+            .child('history')
+            .once('value', res => this.setState({
+                ongoing: res._value.filter(order => order.onGoing === true)
+
+            }))
         return (
             <View>
                 <Icon name={this.props.iconName} size={25} color={this.props.tintColor} />
                 {(this.props.routeName === 'Order' && total !== 0) && <View
                     style={styles.textAmount}>
                     <Text style={styles.text}>{total}</Text>
+                </View>
+                }
+                {(this.props.routeName === 'History' && this.state.ongoing !== null) && <View
+                    style={styles.textAmount}>
+                    <Text style={styles.text}>{this.state.ongoing.length}</Text>
                 </View>
                 }
             </View>
